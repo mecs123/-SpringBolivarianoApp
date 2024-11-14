@@ -4,3 +4,10 @@ spring:
   config:
     import: 'optional:configserver:http://localhost:8888'
 
+springdoc:
+  api-docs:
+    path: /v3/api-docs  # Donde Swagger encontrará la documentación en cada microservicio
+  swagger-ui:
+    path: /swagger-ui.html
+    url: /v3/api-docs
+

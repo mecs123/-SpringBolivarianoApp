@@ -21,3 +21,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
+springdoc:
+  api-docs:
+    enabled: true  # Habilita el endpoint /v3/api-docs para la documentación de Swagger

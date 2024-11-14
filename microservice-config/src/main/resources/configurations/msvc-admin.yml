@@ -1,0 +1,20 @@
+server:
+  port: 8062  # Puerto donde corre Spring Boot Admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info,env  # Exponer los endpoints Actuator
+
+eureka:
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
