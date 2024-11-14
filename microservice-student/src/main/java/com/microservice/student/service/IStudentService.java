@@ -10,4 +10,6 @@ public interface IStudentService {
     Student findById(Long id);
     void save(Student student);
     List<Student> findByCourseId(Long courseId);
+
+    void delete(Long id);
 }

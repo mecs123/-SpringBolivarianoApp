@@ -32,4 +32,9 @@ public class StudentServiceImpl implements IStudentService {
     public List<Student> findByCourseId(Long courseId) {
         return studentRepository.findAllByCourseId(courseId);
     }
+
+    @Override
+    public void delete(Long id) {
+
+    }
 }
